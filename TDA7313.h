@@ -4,7 +4,8 @@
 #ifndef TDA7313_H
 #define TDA7313_H
 
-#define TDA7313_address 0x44 // адрес 0b1000100
+#define TDA7313_address 0x88 // адрес 0b10001000
+//#define TDA7313_address 0x44 // адрес 0b1000100
 
 
 #include <Arduino.h>
