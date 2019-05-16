@@ -35,8 +35,7 @@ void TDA7313::setSwitch(int input, int loud, int usil){
   switch (input){
     case 0:input = 0b01000000;break;
     case 1:input = 0b01000001;break;
-    case 2:input = 0b01000010;break;
-    case 3:input = 0b01000011;break; 
+    case 2:input = 0b01000010;break; 
   }
   switch (loud){
     case 1:loud = 0b01000000;break;
