@@ -18,7 +18,7 @@ class TDA7313
 	void setAttRR(int att_rr); // 0..31     
         void setAttLF(int att_lf); // 0..31         
         void setAttRF(int att_rf); // 0..31 
-        void setSwitch(int input, int loud, int usil); // 0..3 , 1-on 0-off , 0...3 (0...11.25dB)
+        void setSwitch(int input, int loud, int usil); // 0..2 , 1-on 0-off , 0...3 (0...11.25dB)
         void setBass(int bass); // -7...+7
         void setTreble(int treble); //  -7...+7
 	
