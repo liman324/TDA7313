@@ -33,21 +33,21 @@ void TDA7313::setAttRR(int att_rr){
 
 void TDA7313::setSwitch(int input, int loud, int usil){
   switch (input){
-    case 0:input = 0b01000000;break;
-    case 1:input = 0b01000001;break;
-    case 2:input = 0b01000010;break; 
+    case 0:input = 0b00000000;break;
+    case 1:input = 0b00000001;break;
+    case 2:input = 0b00000010;break;
   }
   switch (loud){
-    case 1:loud = 0b01000000;break;
-    case 0:loud = 0b01000100;break;
+    case 1:loud = 0b00000000;break;
+    case 0:loud = 0b00000100;break;
   }
   switch (usil){
-    case 0:usil = 0b01011000;break;
-    case 1:usil = 0b01010000;break;
-    case 2:usil = 0b01001000;break;
-    case 3:usil = 0b01000000;break; 
+    case 0:usil = 0b00011000;break;
+    case 1:usil = 0b00010000;break;
+    case 2:usil = 0b00001000;break;
+    case 3:usil = 0b00000000;break; 
   }
-  int sw = input + loud + usil;
+  int sw = 0b01000000 + input + loud + usil;
   writeWire(sw);
 }
 
@@ -72,25 +72,25 @@ void TDA7313::setBass(int bass){
   writeWire(bass);
 }
 
-void TDA7313::setTreble(int treble){
-  switch (treble){
-    case -7: treble = 0b01110000;break;
-    case -6: treble = 0b01110001;break;
-    case -5: treble = 0b01110010;break;
-    case -4: treble = 0b01110011;break; 
-    case -3: treble = 0b01110100;break;
-    case -2: treble = 0b01110101;break;
-    case -1: treble = 0b01110110;break;
-    case 0:  treble = 0b01110111;break;
-    case 1:  treble = 0b01111110;break;
-    case 2:  treble = 0b01111101;break;
-    case 3:  treble = 0b01111100;break;
-    case 4:  treble = 0b01111011;break;
-    case 5:  treble = 0b01111010;break;
-    case 6:  treble = 0b01111001;break;
-    case 7:  treble = 0b01111000;break;
+void TDA7313::setTreble(int treb){
+  switch (treb){
+    case -7: treb = 0b01110000;break;
+    case -6: treb = 0b01110001;break;
+    case -5: treb = 0b01110010;break;
+    case -4: treb = 0b01110011;break; 
+    case -3: treb = 0b01110100;break;
+    case -2: treb = 0b01110101;break;
+    case -1: treb = 0b01110110;break;
+    case 0:  treb = 0b01111111;break;
+    case 1:  treb = 0b01111110;break;
+    case 2:  treb = 0b01111101;break;
+    case 3:  treb = 0b01111100;break;
+    case 4:  treb = 0b01111011;break;
+    case 5:  treb = 0b01111010;break;
+    case 6:  treb = 0b01111001;break;
+    case 7:  treb = 0b01111000;break;
   }
-  writeWire(treble);
+  writeWire(treb);
 }
 
 void TDA7313::writeWire(char a){
