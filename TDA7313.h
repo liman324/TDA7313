@@ -4,8 +4,7 @@
 #ifndef TDA7313_H
 #define TDA7313_H
 
-#define TDA7313_address 0x88 // адрес 0b10001000
-//#define TDA7313_address 0x44 // адрес 0b1000100
+#define TDA7313_address 0x44 // адрес 0b10001000
 
 
 #include <Arduino.h>
@@ -20,7 +19,7 @@ class TDA7313
         void setAttRF(int att_rf); // 0..31 
         void setSwitch(int input, int loud, int usil); // 0..2 , 1-on 0-off , 0...3 (0...11.25dB)
         void setBass(int bass); // -7...+7
-        void setTreble(int treble); //  -7...+7
+        void setTreble(int treb); //  -7...+7
 	
   private:
 	void writeWire(char a);
